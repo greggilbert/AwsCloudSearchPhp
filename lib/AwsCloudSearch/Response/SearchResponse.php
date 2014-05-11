@@ -59,6 +59,7 @@ class SearchResponse extends AbstractResponse
                 foreach ($hit as $dataKey => $data) {
                     $returnHits[$key]->{$dataKey} = (!empty($data) ? $data[0] : null);
                 }
+                $returnHits[$key]->_id = $key;
             }
         }
 
